@@ -12,7 +12,7 @@ const errorHandler = (err, req, res, next) => {
         errors: [{message: 'Something went wrong'}]
     })
 
-    next()
+    next();
 }
 
 module.exports = errorHandler;

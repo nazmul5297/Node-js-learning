@@ -6,7 +6,7 @@ class UniqueCheckError extends CustomError {
     constructor(errors) {
         super("uniqie check");
         this.errors = errors;
-        console.log("ssssssss")
+        console.log(" erro uuni")
         Object.setPrototypeOf(this, UniqueCheckError.prototype);
     }
 

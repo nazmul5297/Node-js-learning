@@ -9,15 +9,12 @@ const unique = async (req, res, next) => {
         username=req.body.username;
         console.log("error_username"+  username);
         error1 = await userService.uniqueCheckCreate( username);
-        console.log("ssdsdsdsdsds"+error1);
+        console.log("middle uni "+error1);
         if(error1 > 0){
-            throw new Error( new UniqueCheckError(error1));
+            next (new UniqueCheckError(error1));
         }
     
 }
-
-
-
 
 
 module.exports = {
